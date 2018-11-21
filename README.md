@@ -1,5 +1,8 @@
-/alexaplay coding stolen from:
- https://stackoverflow.com/questions/42254247/return-youtube-video-url-from-keyword-search-with-javascript
-
-https://www.npmjs.com/package/youtube-search
+Instructions:
+    Install Node.js
+    Download packages:
+        Discord.js
+        youtube-search for Discord
+    Open command prompt in local repo
+    Run "node mybot.js"
 
