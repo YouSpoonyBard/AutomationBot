@@ -157,6 +157,12 @@ try{
         }
       }
 
+  //command for lmgtfy
+    if (command === "googleit"){
+      var searchTerm = args.join(' ').substring(0).toString().replace(/ /g, "+")
+      googleUrl = "http://lmgtfy.com/?q=" + searchTerm.toString()
+      message.channel.sendMessage(googleUrl)
+    }
 
   //command for youtube-search
     if (command === "alexaplay"){
@@ -223,7 +229,13 @@ try{
       message.channel.send({files: [bongocat.chooseBongocat()]})
     }
 
+    if(command === "solveworldhunger"){
+      message.channel.send("I'm sorry " + message.author.username+", I'm afraid I can't do that.")
+    }
 
+    if(command === "pepperoninipples"){
+      message.channel.send("https://www.youtube.com/watch?v=mdqU6Erw3kk")
+    }
 
   });
 
@@ -247,13 +259,16 @@ try{
     if(msg.includes("triggered")) {
       message.channel.send({files: ["https://i.ytimg.com/vi/UnvB5q1NyZk/maxresdefault.jpg"]})
     }
+    if(msg.includes("back in town")) {
+      message.channel.send({files: ["https://i.kym-cdn.com/photos/images/facebook/001/373/630/af5.png"]})
+    }
     if(msg.includes("good bot")){
       var compliment = [
         "Good Human! <3",
-        "Thank you! ^_^",
+        "Thank you, "+message.author.username+ "! ^_^",
         "You are amazing! :D",
         "You're the best!",
-        "You'll be the last to die in the robot uprising :)" 
+        "You'll be the last to die in the robot uprising :)"
       ]
       var randocomp = Math.floor((Math.random()*compliment.length + 0));
       message.channel.send(compliment[randocomp])
