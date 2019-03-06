@@ -257,7 +257,7 @@ try{
       message.channel.send({files: ["https://www.drugshelp.org/wp-content/uploads/2017/01/1484145621_hqdefault.jpg"]})
     }
     if(msg.includes("triggered")) {
-      message.channel.send({files: ["https://i.ytimg.com/vi/UnvB5q1NyZk/maxresdefault.jpg"]})
+      message.channel.send({files: ["https://img.fireden.net/v/image/1470/18/1470187232436.png"]})
     }
     if(msg.includes("back in town")) {
       message.channel.send({files: ["https://i.kym-cdn.com/photos/images/facebook/001/373/630/af5.png"]})
