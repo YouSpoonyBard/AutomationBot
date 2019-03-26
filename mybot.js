@@ -3,12 +3,16 @@
   const client = new Discord.Client();
   const config = require("./config.json");
 
-//setup youtube
+//setup youtube search
   var search = require('youtube-search');
   var opts = {
     maxResults: 10,
     key: config.yttoken.toString()
   }
+
+  //setup other youtube search (more functions)
+  const YouTube = require("discord-youtube-api");
+  const youtube = new YouTube(config.yttoken.toString());
 
 //import modules
   var birb = require("./birb.js")
@@ -171,6 +175,13 @@ try{
       message.channel.sendMessage(results[0].link);
       });
     }
+
+  //command for random ohoho video from youtube playlist
+  if (command === "ohoho"){
+    const ohohoArray = await youtube.getPlaylist("https://www.youtube.com/watch?v=FW1QY76d-40&list=PLE1XLrdwAAuCK3by6bEHzFN1yTjxTYHD1")
+    var rand = ohohoArray[Math.floor(Math.random() * ohohoArray.length)]
+     message.channel.sendMessage(rand.url)
+  }  
 
   //test for long komi
     if(command === 'longkomi'){

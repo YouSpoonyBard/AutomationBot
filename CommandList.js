@@ -12,7 +12,8 @@ module.exports = {
         "/listkaomoji               - lists all japanese emoji available",
         "/googleit [keyword(s)]             - let me google that for you",
         "/solveworldhunger              -asks kaomojibot to solve world hunger",
-        "/pepperoninipples          -ask and ye shall recieve, pepperoni nipples"
+        "/pepperoninipples          -ask and ye shall recieve, pepperoni nipples",
+        "/ohoho                 -plays a random smug anime girl laugh"
   ]
   return commands;
     }
