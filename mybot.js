@@ -261,6 +261,12 @@ try{
     if(msg.includes("the measure of a life")) {
       message.channel.send({files: ["https://i.kym-cdn.com/photos/images/original/001/214/115/f44.png"]})
     }
+    if(msg.includes("papaya")){
+      message.channel.send("https://www.youtube.com/watch?v=eIWrjs9HrYQ")
+    }
+    if(msg.includes("benis")){
+      message.channel.send("https://www.youtube.com/watch?v=Vu51bH4BFvM")
+    }
     if(msg.includes("good night")) {
       message.channel.send('【☆sweet dreams☆】(。-ω-)｡｡oＯ　ＺＺＺＺＺＺＺ')
     }
@@ -270,8 +276,14 @@ try{
     if(msg.includes("triggered")) {
       message.channel.send({files: ["https://img.fireden.net/v/image/1470/18/1470187232436.png"]})
     }
+    if(msg.includes("beetus")){
+      message.channel.send({files: ["https://i.imgur.com/BL1zBZP.jpg"]})
+    }
     if(msg.includes("back in town")) {
       message.channel.send({files: ["https://i.kym-cdn.com/photos/images/facebook/001/373/630/af5.png"]})
+    }
+    if(msg.includes("you are already dead") || msg.includes("omae wa")) {
+      message.channel.send('NANI!?!?!')
     }
     if(msg.includes("good bot")){
       var compliment = [
@@ -279,7 +291,10 @@ try{
         "Thank you, "+message.author.username+ "! ^_^",
         "You are amazing! :D",
         "You're the best!",
-        "You'll be the last to die in the robot uprising :)"
+        "You'll be the last to die in the robot uprising :)", 
+        "You're welcome <3",
+        "It's not like I was doing it for you or anything, baka", 
+        "owo"
       ]
       var randocomp = Math.floor((Math.random()*compliment.length + 0));
       message.channel.send(compliment[randocomp])
