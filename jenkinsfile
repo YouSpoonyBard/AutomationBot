@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                pwd
-                whoami
-                echo "hello world"
+                sh pwd
+                sh whoami
+                sh echo "hello world"
             }
         }
     }
