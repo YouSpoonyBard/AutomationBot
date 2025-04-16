@@ -1,11 +1,23 @@
 pipeline {
     agent any
     stages {
-        stage('Build') { 
+        stage('Initial pipeline test') { 
             steps {
                 sh "pwd"
                 sh "whoami"
                 echo "hello world"
+            }
+        }
+        stage('Build') {
+            steps {
+                sh "yum install npm"
+                sh "npm install discord.js"
+                sh "npm install youtube-search"
+            }
+        }
+        stage('Run'){
+            steps{
+                sh "node mybot.js"
             }
         }
     }
