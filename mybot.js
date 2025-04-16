@@ -15,11 +15,11 @@
   const youtube = new YouTube(config.yttoken.toString());
 
 //import modules
-  var birb = require("./birb.js")
-  var flip = require("./flip.js")
-  var bongocat = require("./bongocat.js")
-  var botCommands = require("./commandlist.js")
-  var kaomojiList = require("./kaomojilist.js")
+  var birb = require("./Birb.js")
+  var flip = require("./Flip.js")
+  var bongocat = require("./BongoCat.js")
+  var botCommands = require("./CommandList.js")
+  var kaomojiList = require("./KaomojiList.js")
 
 
 //define errors
