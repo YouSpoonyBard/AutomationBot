@@ -21,7 +21,7 @@ pipeline {
                         \"prefix\" : \"'\$prefix'\"
                 } ' > config.json 
                 '''
-                sh "node mybot.js"
+                sh "nohup node mybot.js &&"
             }
         }
     }
