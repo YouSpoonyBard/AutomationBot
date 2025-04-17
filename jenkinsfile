@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        CONFIG = credentials('config.json')
+    }
     stages {
         stage('Initial pipeline test') { 
             steps {
@@ -10,6 +13,8 @@ pipeline {
         }
         stage('Build') {
             steps {
+                sh "echo $CONFIG > config.json"
+                sh "cat config.json"
                 sh "node mybot.js"
             }
         }
