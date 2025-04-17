@@ -16,12 +16,11 @@ pipeline {
         stage('Build') {
             steps {
                 sh ''' echo " {
-                        \"token\" : \"\$dsToken\",
-                        \"yttoken\" : \"\$yttoken\",
-                        \"prefix\" : \"\$prefix\"
+                        "\""token"\"" : "\""\$dsToken"\"",
+                        "\""yttoken"\"" : "\""\$yttoken"\"",
+                        "\""prefix"\"" : "\""\$prefix"\""
                 } " > config.json 
                 '''
-                sh "cat config.json"
                 sh "node mybot.js"
             }
         }
