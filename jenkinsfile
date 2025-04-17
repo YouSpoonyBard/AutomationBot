@@ -15,6 +15,7 @@ pipeline {
         }
         stage('Build') {
             steps {
+                sh "rm -rf config.json"
                 sh ''' echo ' {
                         \"token\" : \"'\$dsToken'\",
                         \"yttoken\" : \"'\$yttoken'\",
