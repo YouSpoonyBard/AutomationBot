@@ -1,7 +1,9 @@
 pipeline {
     agent any
     environment {
-        CONFIG = credentials('config.json')
+        dsToken = credentials('dsToken')
+        yttoken = credentials('yttoken')
+        prefix = '/'
     }
     stages {
         stage('Initial pipeline test') { 
@@ -13,7 +15,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh "echo $CONFIG > config.json"
+                sh " echo " {
+                        "token" : "$dsToken",
+                        "yttoken" : "$yttoken",
+                        "prefix" : "$prefix"
+                } " > configtest.json 
+                "
                 sh "cat config.json"
                 sh "node mybot.js"
             }
